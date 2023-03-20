@@ -69,5 +69,3 @@ namespace Academico.Controllers
         }
     }
 }
-//Linke Get
-//lista post
