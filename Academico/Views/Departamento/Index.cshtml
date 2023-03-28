@@ -1,7 +1,7 @@
-﻿@model IEnumerable<Academico.Models.Instituicao>
+﻿@model IEnumerable<Academico.Models.Departamento>
 
 @{
-    ViewData["Title"] = "Lista de Instituições";
+    ViewData["Title"] = "Lista de Departamento";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -20,7 +20,7 @@
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Endereco)
+                @Html.DisplayNameFor(model => model.Sala)
             </th>
             <th></th>
         </tr>
@@ -36,7 +36,7 @@
                     @Html.DisplayFor(modelItem => item.Nome)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Endereco)
+                    @Html.DisplayFor(modelItem => item.Sala)
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |

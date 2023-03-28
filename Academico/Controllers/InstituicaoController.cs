@@ -44,6 +44,14 @@ namespace Academico.Controllers
             return View(instituicoes.Where(i=>i.Id == id).First());
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Instituicao instituicao)
+        {
+            instituicoes.Remove(instituicoes.Where(i => i.Id == instituicao.Id).First());
+            instituicoes.Add(instituicao);
+            return RedirectToAction("Index");
+        }
         public IActionResult Details(long id)
         {
             return View(instituicoes.Where(i => i.Id == id).First());
@@ -61,11 +69,6 @@ namespace Academico.Controllers
         }
 
 
-        public IActionResult Edit(Instituicao instituicao)
-        {
-            instituicoes.Remove(instituicoes.Where(i => i.Id == instituicao.Id).First());
-            instituicoes.Add(instituicao);
-            return RedirectToAction("Index");
-        }
+      
     }
 }
