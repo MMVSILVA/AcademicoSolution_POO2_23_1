@@ -18,6 +18,12 @@ namespace Academico.Controllers
                 Id= 2,
                 Nome = "TI",
                 Sala = 202
+            },
+             new Departamento()
+            {
+                Id= 3,
+                Nome = "Operação",
+                Sala = 203
             }
         };
         public IActionResult Index()
